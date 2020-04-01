@@ -45,13 +45,24 @@ onClickListener = (viewId) => {
 
     .then((responseJson) => {
        // If server response message same as Data Matched
-       if(responseJson === 'Data Matched')
+       if(responseJson == 1)
         {
- 
             //Then open Profile activity and send user email to profile activity.
-            this.onClickListener('Menu');
+            this.onClickListener('SmartHomes_Shopkeeper');
+ 
+        }
+        else if(responseJson == 2)
+        {
+            //Then open Profile activity and send user email to profile activity.
+            this.onClickListener('SmartHomes_Distributor');
  
         } 
+        else if(responseJson == 3)
+        {
+            //Then open Profile activity and send user email to profile activity.
+            this.onClickListener('SmartHomes_Manufacturer');
+ 
+        }  
         else{
  
           Alert.alert(responseJson);

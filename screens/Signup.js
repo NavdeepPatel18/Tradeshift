@@ -13,9 +13,18 @@ import {
 
 export default class SignUpView extends Component {
 
-  static navigationOptions = {
-    header: null
-  }
+  static navigationOptions = {  
+
+
+    title: 'Add Customer',  
+    headerStyle: {  
+        backgroundColor: '#f4511e',  
+    },  
+
+    headerTitleStyle: {  
+        fontWeight: 'bold',  
+    },  
+}; 
 
   onClickListener = (viewId) => {
     this.props.navigation.navigate(viewId);
